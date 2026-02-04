@@ -1,17 +1,14 @@
-import { useState } from 'react'
 import './App.css'
+import {Route, Routes} from "react-router";
+import Home from "./pages/home.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>Hello World</h1>
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/about" element={<div>About</div>} />
+    </Routes>
+  );
 }
 
 export default App
