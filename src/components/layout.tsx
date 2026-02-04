@@ -1,9 +1,10 @@
+import "./layout.css"
 import type {JSX} from "react";
 import {Link} from "react-router";
 
 function Layout({children} : {children: JSX.Element}) {
   return (
-    <>
+    <div className="layout">
       <header>
         <nav>
           <ul>
@@ -20,7 +21,7 @@ function Layout({children} : {children: JSX.Element}) {
       <footer>
         <p>&copy; 2026 MySite. All rights reserved.</p>
       </footer>
-    </>
+    </div>
   )
 }
 
